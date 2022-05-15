@@ -4,6 +4,10 @@ module.exports = {
   ],
   theme: {
     extend: {},
+    fontFamily: {
+      'display': ['Koulen', 'sans-serif'],
+      'body': ['IBM Plex Serif', 'sans-serif'],
+    },
   },
   plugins: [],
 }
