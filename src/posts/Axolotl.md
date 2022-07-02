@@ -1,4 +1,5 @@
 ---
+tags: online
 title: Axolotl
 publisher: The Yale Review
 link: https://yalereview.org/article/axolotl

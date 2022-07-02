@@ -17,7 +17,39 @@ title: Amy Roa
 <p>Coming Soon from <a href="https://www.steeltoebooks.com/" class="underline">Steel Toe Books</a></p>
 </div>
 
+<hr class="my-6">
 
+<div class="max-w-lg mx-auto mb-6 px-4 text-center">
+<h2 class="text-sm mb-8 bold uppercase">SELECTED ONLINE POEMS</h2>
+<ul>
+{% for poem in collections.online %}
 
-
+<li class="my-4">
+  <h4 class="italic">{{poem.data.publisher}}</h4>
+  <h3 class="bold text-xl "><a href="{{poem.data.link}}" class="hover:underline" target="_blank">"{{poem.data.title}}"</a></h3>
+</li>
+{% endfor %}
+</ul>
+</div>
+<hr class="my-6">
+<div class="max-w-lg mx-auto mb-6 px-4 text-center">
+  <h2 class="text-sm mb-8 bold uppercase">Print Journals</h2>
+  <ul>
+  {% for publication in collections.print %}
+  
+  <li class="my-4">
+    <h4 class="italic">
+      <a class=" hover:underline" href="{{publication.data.link}}" target="_blank">
+        {{publication.data.publisher}}
+      </a>
+    </h4>
+    <h3 class="bold text-xl">
+      {% for poem in publication.data.poems %}
+      "{{poem}}" {% if not loop.last %},{% endif %}
+      {% endfor %}
+    </h3>
+  </li>
+  {% endfor %}
+  </ul>
+  </div>
 </div>
