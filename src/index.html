@@ -24,9 +24,11 @@ title: Amy Roa
 <ul>
 {% for poem in collections.online %}
 
-<li class="my-4">
+<li >
+  <div class="my-4">
   <h4 class="italic">{{poem.data.publisher}}</h4>
   <h3 class="bold text-xl "><a href="{{poem.data.link}}" class="hover:underline" target="_blank">"{{poem.data.title}}"</a></h3>
+</div>
 </li>
 {% endfor %}
 </ul>
